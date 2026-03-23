@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <title>Ahmed Abdelhameed | Senior Odoo Developer</title>
+    <meta name="description" content="Portfolio of Ahmed Abdelhameed, Senior Odoo Developer specializing in OWL, API Integrations, ZATKA, and enterprise implementations for top KSA authorities.">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-dim": "#a533ff",
+                        "secondary": "#d873ff",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container-low": "#131313",
+                        "surface-container-highest": "#262626",
+                        "background": "#0e0e0e",
+                        "on-surface": "#ffffff",
+                        "on-surface-variant": "#adaaaa",
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk", "Cairo", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "arabic": ["Cairo", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        .glass-card {
+            background: rgba(38, 38, 38, 0.3);
+            backdrop-filter: blur(20px) saturate(150%);
+            border: 1px solid rgba(207, 150, 255, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(207, 150, 255, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(165, 51, 255, 0.2);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #a533ff, #d873ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-noise {
+            background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+            opacity: 0.04;
+            pointer-events: none;
+        }
+        .lang-en [lang="ar"] { display: none !important; }
+        .lang-ar [lang="en"] { display: none !important; }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body lang-en selection:bg-primary-dim selection:text-white overflow-x-hidden">
+    <div class="fixed inset-0 bg-noise z-[-1]"></div>
+
+    <nav class="fixed top-0 w-full z-50 border-b border-[#cf96ff]/15 bg-[#0e0e0e]/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(157,0,255,0.08)]">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20">
+            <div class="text-base sm:text-lg md:text-xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#a533ff] to-[#d873ff] font-headline">
+                Ahmed Abdelhameed
+            </div>
+            
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 font-headline text-sm tracking-tight">
+                <a class="text-[#adaaaa] hover:text-[#a533ff] transition-colors" href="#story"><span lang="en">My Story</span><span lang="ar">رحلتي</span></a>
+                <a class="text-[#adaaaa] hover:text-[#a533ff] transition-colors" href="#impact"><span lang="en">Expertise</span><span lang="ar">الخبرات والمهارات</span></a>
+                <a class="text-[#adaaaa] hover:text-[#a533ff] transition-colors" href="#experience"><span lang="en">Experience</span><span lang="ar">الخبرة السابقة</span></a>
+                <a class="text-[#adaaaa] hover:text-[#a533ff] transition-colors" href="#projects"><span lang="en">Enterprise Projects</span><span lang="ar">مشاريع كبرى</span></a>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <div class="bg-surface-bright p-1 rounded-full flex gap-1">
+                    <button id="btn-en" onclick="setLang('en')" class="px-3 py-1.5 text-xs font-bold rounded-full bg-primary-dim text-white transition-all">EN</button>
+                    <button id="btn-ar" onclick="setLang('ar')" class="px-3 py-1.5 text-xs font-bold rounded-full text-[#adaaaa] hover:text-white transition-all">AR</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20 md:pt-24">
+        <section class="relative min-h-[85vh] flex flex-col justify-center px-4 sm:px-6 mt-6 md:mt-0" id="about">
+            <div class="absolute top-1/4 -start-20 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-primary-dim/20 rounded-full blur-[80px] md:blur-[120px]"></div>
+            
+            <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div class="space-y-6 z-10 text-center md:text-start">
+                    <div class="inline-flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-full bg-primary-dim/10 border border-primary-dim/20 w-fit mx-auto md:mx-0">
+                        <span class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary-dim animate-pulse"></span>
+                        <span class="text-[9px] sm:text-[10px] md:text-xs font-bold tracking-widest text-primary-dim uppercase" lang="en">Senior Odoo Developer | Ready for Enterprise Challenges</span>
+                        <span class="text-[9px] sm:text-[10px] md:text-xs font-bold tracking-widest text-primary-dim uppercase" lang="ar">كبير مطوري أودو | مستعد لتحديات المؤسسات الكبرى</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold font-headline tracking-tighter leading-tight md:leading-none">
+                        Ahmed <br class="hidden md:block"/><span class="text-gradient">Abdelhameed</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-on-surface-variant font-light max-w-xl mx-auto md:mx-0 leading-relaxed">
+                        <span lang="en">Transforming businesses through robust Odoo implementations, from v15 to the latest releases. Passionate learner and complex problem solver.</span>
+                        <span lang="ar">أحول أهداف البزنس إلى واقع تقني صلب عبر أودو، بدءاً من الإصدار 15 وحتى أحدث الإصدارات. شغوف بالتعلم وحلال للمشاكل المعقدة.</span>
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start pt-2">
+                        <a href="https://drive.google.com/file/d/1EHYQ9mL6jSDFkGQLuWDTLSqtY1gx6qJc/view?usp=sharing" target="_blank" class="w-full sm:w-auto px-6 py-3.5 md:py-4 bg-gradient-to-r from-primary-dim to-secondary text-white text-sm md:text-base font-bold rounded-xl shadow-[0px_0px_20px_rgba(165,51,255,0.3)] hover:scale-105 transition-transform duration-300 text-center">
+                            <span lang="en">Download CV</span>
+                            <span lang="ar">تحميل السيرة الذاتية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative group mt-8 md:mt-0 z-10 w-full max-w-[280px] sm:max-w-sm mx-auto md:max-w-none">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-primary-dim to-secondary opacity-20 blur-xl group-hover:opacity-40 transition-opacity rounded-full"></div>
+                    <div class="relative aspect-square rounded-3xl overflow-hidden border border-white/10 glass-card">
+                        <img alt="Ahmed Abdelhameed" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop"/>
+                    </div>
+                    
+                    <div class="absolute -bottom-4 -start-4 md:-bottom-6 md:-start-6 glass-card p-3 md:p-4 rounded-2xl shadow-2xl animate-bounce" style="animation-duration: 3s;">
+                        <div class="flex items-center gap-2 md:gap-3">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-dim/20 flex items-center justify-center text-primary-dim">
+                                <span class="material-symbols-outlined text-sm md:text-base">upgrade</span>
+                            </div>
+                            <div>
+                                <p class="text-[8px] md:text-[10px] text-on-surface-variant uppercase tracking-widest leading-none">
+                                    <span lang="en">Mastery</span><span lang="ar">إتقان</span>
+                                </p>
+                                <p class="text-xs md:text-sm font-bold mt-0.5 md:mt-1">
+                                    <span lang="en">v15 to Latest</span><span lang="ar">من V15 للأحدث</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-surface-container-low/30 px-4 sm:px-6 border-y border-white/5" id="story">
+            <div class="max-w-5xl mx-auto text-center">
+                <span class="material-symbols-outlined text-4xl md:text-5xl text-secondary mb-4 md:mb-6">local_fire_department</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-headline mb-4 md:mb-6">
+                    <span lang="en">The Drive for <span class="text-gradient">Continuous Growth</span></span>
+                    <span lang="ar">شغف <span class="text-gradient">النمو المستمر</span> والتطور</span>
+                </h2>
+                <p class="text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-3xl mx-auto">
+                    <span lang="en">"My journey with Odoo started at version 15 and hasn't stopped evolving. Whether it's digging into official documentations to master the <b>OWL framework</b> from scratch, delivering pixel-perfect solutions, or upgrading massive databases, my core driver is a relentless passion for learning and discovering new opportunities."</span>
+                    <span lang="ar">"رحلتي مع أودو بدأت من الإصدار 15 ولم تتوقف عن التطور. سواء كان الأمر يتعلق بالغوص في التوثيق الرسمي (Docs) لإتقان إطار عمل <b>OWL</b> من الصفر، أو تقديم حلول متكاملة، أو ترقية قواعد بيانات ضخمة، فإن المحرك الأساسي لي هو شغف لا ينتهي للتعلم واكتشاف فرص جديدة."</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-32 px-4 sm:px-6 impact" id="impact">
+            <div class="max-w-7xl mx-auto">
+                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-headline tracking-tight mb-10 md:mb-16 text-center md:text-start">
+                     <span lang="en">Technical <span class="text-gradient">Core Skills</span></span>
+                     <span lang="ar">المهارات <span class="text-gradient">التقنية الأساسية</span></span>
+                 </h2>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="glass-card p-5 md:p-8 rounded-2xl">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl text-primary-dim mb-3 md:mb-4">code</span>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="en">Frontend Development</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="ar">تطوير الواجهات الأمامية</h3>
+                        <div class="flex flex-wrap gap-2 text-xs md:text-sm text-on-surface-variant">
+                            <span>HTML/HTML5</span>
+                            <span>CSS/CSS3</span>
+                            <span>Sass</span>
+                            <span>JavaScript/jQuery</span>
+                            <span>React JS</span>
+                            <span>OWL JS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 md:p-8 rounded-2xl border-primary-dim/50 shadow-[0_0_15px_rgba(165,51,255,0.2)]">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl text-secondary mb-3 md:mb-4">database</span>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="en">Backend & Databases</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="ar">الواجهات الخلفية وقواعد البيانات</h3>
+                        <div class="flex flex-wrap gap-2 text-xs md:text-sm text-on-surface-variant">
+                            <span>Python / OOP</span>
+                            <span>MySQL</span>
+                            <span>Oracle</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 md:p-8 rounded-2xl border-primary-dim/50 shadow-[0_0_15px_rgba(165,51,255,0.2)]">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl text-primary-dim mb-3 md:mb-4">terminal</span>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="en">Odoo Development</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="ar">تطوير نظام أودو</h3>
+                        <div class="flex flex-wrap gap-2 text-xs md:text-sm text-on-surface-variant">
+                            <span>Odoo / Odoo.sh</span>
+                            <span>XML / QWeb</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 md:p-8 rounded-2xl">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl text-secondary mb-3 md:mb-4">api</span>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="en">Integrations & Tools</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 font-headline text-white" lang="ar">التكامل والأدوات</h3>
+                        <div class="flex flex-wrap gap-2 text-xs md:text-sm text-on-surface-variant">
+                            <span>REST APIs</span>
+                            <span>Postwomen</span>
+                            <span>API Integration</span>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-32 bg-surface-container-low px-4 sm:px-6 experience" id="experience">
+            <div class="max-w-5xl mx-auto">
+                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-headline tracking-tight mb-10 md:mb-16 text-center md:text-start">
+                     <span lang="en">Professional <span class="text-gradient">Journey</span></span>
+                     <span lang="ar">الخبرة <span class="text-gradient">المهنية السابقة</span></span>
+                 </h2>
+                 
+                 <div class="relative border-s-2 border-white/10 ms-2 sm:ms-4 space-y-8 md:space-y-12 pb-4">
+                    
+                    <div class="relative group ps-6 sm:ps-8">
+                        <div class="absolute w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-primary-dim bg-background -start-[7px] md:-start-[9px] top-1.5 md:top-2 z-10 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary-dim rounded-full group-hover:scale-150 transition-transform"></div>
+                        </div>
+                        <div class="glass-card p-5 md:p-8 rounded-2xl shadow-xl hover:border-primary-dim/50 transition-colors">
+                            <span class="text-[10px] md:text-xs font-bold text-primary-dim tracking-widest uppercase mb-1 md:mb-2 block">
+                                <span lang="en">1-2022 to 3-2023</span>
+                                <span lang="ar"><bdi>1-2022</bdi> إلى <bdi>3-2023</bdi></span>
+                            </span>
+                            <h3 class="text-lg md:text-2xl font-bold font-headline text-white mb-1 md:mb-2" lang="en">FrontEnd Developer – Egyptian Armed Forces</h3>
+                            <h3 class="text-lg md:text-2xl font-bold font-headline text-white mb-1 md:mb-2" lang="ar">مطوّر واجهات أمامية – القوات المسلحة المصرية</h3>
+                            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                                <span lang="en">Experienced front-end developer with a background in the armed forces, specializing in developing secure, user-friendly interfaces and optimizing performance for mission-critical applications.</span>
+                                <span lang="ar">مطوّر واجهات أمامية (FrontEnd) ذو خلفية في القوات المسلحة، متخصص في تطوير واجهات آمنة وسهلة الاستخدام وتحسين الأداء للتطبيقات ذات المهام الحرجة.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative group ps-6 sm:ps-8">
+                        <div class="absolute w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-secondary bg-background -start-[7px] md:-start-[9px] top-1.5 md:top-2 z-10 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-secondary rounded-full group-hover:scale-150 transition-transform"></div>
+                        </div>
+                        <div class="glass-card p-5 md:p-8 rounded-2xl shadow-xl hover:border-secondary/50 transition-colors">
+                            <span class="text-[10px] md:text-xs font-bold text-secondary tracking-widest uppercase mb-1 md:mb-2 block">
+                                <span lang="en">4-2023 to 9-2023</span>
+                                <span lang="ar"><bdi>4-2023</bdi> إلى <bdi>9-2023</bdi></span>
+                            </span>
+                            <h3 class="text-lg md:text-2xl font-bold font-headline text-white mb-1 md:mb-2" lang="en">FrontEnd Developer – F.H Bertling Logistics</h3>
+                            <h3 class="text-lg md:text-2xl font-bold font-headline text-white mb-1 md:mb-2" lang="ar">مطوّر واجهات أمامية – F.H. Bertling Logistics</h3>
+                            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                                <span lang="en">Front-end developer at F.H. Bertling Logistics, responsible for designing and optimizing user interfaces for logistics solutions, which enhanced user experience and improved operational efficiency.</span>
+                                <span lang="ar">مطوّر واجهات أمامية في F.H. Bertling Logistics، مسؤول عن تصميم وتحسين واجهات المستخدم لحلول الخدمات اللوجستية، مما عزز تجربة المستخدم وحسّن الكفاءة التشغيلية.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative group ps-6 sm:ps-8">
+                        <div class="absolute w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-primary-dim bg-background -start-[7px] md:-start-[9px] top-1.5 md:top-2 z-10 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary-dim rounded-full group-hover:scale-150 transition-transform"></div>
+                        </div>
+                        <div class="glass-card p-5 md:p-8 rounded-2xl shadow-xl hover:border-primary-dim/50 transition-colors">
+                            <span class="text-[10px] md:text-xs font-bold text-primary-dim tracking-widest uppercase mb-1 md:mb-2 block">
+                                <span lang="en">Present</span>
+                                <span lang="ar">حتى الآن</span>
+                            </span>
+                            <h3 class="text-lg md:text-2xl font-bold font-headline text-white mb-1 md:mb-2" lang="en">Odoo Developer – IT ZAIN</h3>
+                            <h3 class="text-lg md:text-2xl font-bold font-headline text-white mb-1 md:mb-2" lang="ar">مطور أودو – شركة ITZain</h3>
+                            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                                <span lang="en">Odoo developer at ITZain Co., specializing in customizing and integrating Odoo modules to streamline business processes and enhance overall system functionality for clients.</span>
+                                <span lang="ar">مطور أودو في شركة ITZain، متخصص في تخصيص ودمج وحدات أودو لتبسيط العمليات التجارية وتعزيز الوظائف العامة للنظام للعملاء.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                 </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-32 px-4 sm:px-6 certifications" id="certifications">
+            <div class="max-w-7xl mx-auto">
+                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-headline tracking-tight mb-10 md:mb-16 text-center md:text-start">
+                     <span lang="en">Professional <span class="text-gradient">Certifications</span></span>
+                     <span lang="ar">الشهادات <span class="text-gradient">المهنية والاعتمادات</span></span>
+                 </h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div class="glass-card p-6 md:p-8 rounded-2xl">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl text-secondary mb-4 md:mb-6">workspace_premium</span>
+                        <h3 class="text-lg md:text-2xl font-bold font-headline text-white" lang="en">Mahara Tech Front End Development By ITI</h3>
+                        <h3 class="text-lg md:text-2xl font-bold font-headline text-white" lang="ar">تطوير الواجهات الأمامية من Mahara Tech (ITI)</h3>
+                        <p class="text-xs sm:text-sm text-on-surface-variant mt-3 md:mt-4 leading-relaxed">
+                            <span lang="en">Comprehensive training program in core front-end technologies and best practices by the Information Technology Institute.</span>
+                            <span lang="ar">برنامج تدريبي شامل في تقنيات الواجهة الأمامية الأساسية وأفضل الممارسات من معهد تكنولوجيا المعلومات.</span>
+                        </p>
+                    </div>
+                    <div class="glass-card p-6 md:p-8 rounded-2xl">
+                        <span class="material-symbols-outlined text-3xl md:text-4xl text-secondary mb-4 md:mb-6">workspace_premium</span>
+                        <h3 class="text-lg md:text-2xl font-bold font-headline text-white" lang="en">Full Stack Development on Udemy</h3>
+                        <h3 class="text-lg md:text-2xl font-bold font-headline text-white" lang="ar">تطوير Full Stack على منصة Udemy</h3>
+                        <p class="text-xs sm:text-sm text-on-surface-variant mt-3 md:mt-4 leading-relaxed">
+                            <span lang="en">Completed extensive training in both front-end and back-end technologies to build complete web applications.</span>
+                            <span lang="ar">أتممت تدريبًا مكثفًا في تقنيات الواجهة الأمامية والخلفية لبناء تطبيقات ويب كاملة.</span>
+                        </p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-32 bg-surface-container-low px-4 sm:px-6 projects" id="projects">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center md:text-start mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-headline tracking-tight mb-3 md:mb-4">
+                        <span lang="en">Enterprise <span class="text-gradient">Implementations</span></span>
+                        <span lang="ar">مشاريع <span class="text-gradient">مؤسسية كبرى</span></span>
+                    </h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto md:mx-0 text-sm md:text-base leading-relaxed">
+                        <span lang="en">Delivering high-scale, secure, and integrated solutions for top KSA governmental authorities.</span>
+                        <span lang="ar">تقديم حلول متكاملة وآمنة وعالية التوسع لأكبر الهيئات الحكومية في المملكة العربية السعودية.</span>
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <div class="group relative rounded-3xl overflow-hidden glass-card p-1">
+                        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                            <img alt="SBA Ticket System Portal UI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/tickets.png"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent flex flex-col justify-end p-5 md:p-8">
+                                <span class="text-primary-dim font-bold text-[10px] md:text-xs tracking-widest uppercase mb-1.5 md:mb-2">SBA Authority</span>
+                                <h3 class="text-lg md:text-2xl font-bold mb-1.5 md:mb-2 text-white" lang="en">Enterprise Helpdesk Portal</h3>
+                                <h3 class="text-lg md:text-2xl font-bold mb-1.5 md:mb-2 text-white" lang="ar">بوابة الدعم الفني المؤسسية</h3>
+                                <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed" lang="en">Developed a highly secure ticketing portal integrated with Active Directory (LDAP), serving over 5,000 users.</p>
+                                <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed" lang="ar">تطوير بوابة تذاكر مخصصة وآمنة مدمجة مع LDAP، تخدم أكثر من 5000 مستخدم بهيئة الإذاعة والتلفزيون السعودية.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group relative rounded-3xl overflow-hidden glass-card p-1">
+                        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                            <img alt="Oracle Odoo ZATKA STA Integration" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/odoo_oracle.png"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent flex flex-col justify-end p-5 md:p-8">
+                                <span class="text-secondary font-bold text-[10px] md:text-xs tracking-widest uppercase mb-1.5 md:mb-2">STA Authority</span>
+                                <h3 class="text-lg md:text-2xl font-bold mb-1.5 md:mb-2 text-white" lang="en">Oracle-Odoo-ZATKA Pipeline</h3>
+                                <h3 class="text-lg md:text-2xl font-bold mb-1.5 md:mb-2 text-white" lang="ar">تكامل البيانات مع زاتكا</h3>
+                                <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed" lang="en">Engineered a financial data bridge connecting legacy Oracle DBs to Odoo for ZATKA phase 2 compliance.</p>
+                                <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed" lang="ar">هندسة جسر بيانات مالي يربط قواعد بيانات أوراكل بنظام أودو للتوافق مع المرحلة الثانية لهيئة السياحة وزاتكا.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group relative rounded-3xl overflow-hidden glass-card p-1">
+                        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                            <img alt="Leave Management System" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/hr.png"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent flex flex-col justify-end p-5 md:p-8">
+                                <span class="text-primary-dim font-bold text-[10px] md:text-xs tracking-widest uppercase mb-1.5 md:mb-2">HR Automation</span>
+                                <h3 class="text-lg md:text-2xl font-bold mb-1.5 md:mb-2 text-white" lang="en">Leave Management System</h3>
+                                <h3 class="text-lg md:text-2xl font-bold mb-1.5 md:mb-2 text-white" lang="ar">نظام إدارة طلبات الإجازات</h3>
+                                <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed" lang="en">Developed an automated workflow for leave requests, multi-level approvals, and balance tracking integrated with Odoo HR.</p>
+                                <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed" lang="ar">تطوير دورة عمل مؤتمتة لطلبات الإجازات، الموافقات، وتتبع أرصدة الموظفين بشكل متكامل مع نظام الموارد البشرية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-32 px-4 sm:px-6 contact" id="contact">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold font-headline mb-6 md:mb-10">
+                    <span lang="en">Let's Build <span class="text-gradient">Together</span></span>
+                    <span lang="ar">دعنا نبني نظامك <span class="text-gradient">القادم</span></span>
+                </h2>
+                <div class="glass-card p-6 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[2.5rem] relative overflow-hidden">
+                    <div class="absolute top-0 end-0 w-24 h-24 md:w-32 md:h-32 bg-primary-dim/10 blur-3xl"></div>
+                    <div class="space-y-6 md:space-y-8 relative z-10">
+                        <p class="text-base md:text-xl text-on-surface-variant leading-relaxed">
+                            <span lang="en">Looking for a passionate Odoo Developer to drive your next enterprise project?</span>
+                            <span lang="ar">هل تبحث عن مطور أودو شغوف ومحترف لتنفيذ مشروعك المؤسسي القادم؟</span>
+                        </p>
+                        
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm sm:text-base md:text-lg font-bold">
+                            <a class="flex items-center gap-2 md:gap-3 text-primary-dim hover:text-white transition-colors break-all text-center" href="mailto:ahmedabdelhamied905@gmail.com">
+                                <span class="material-symbols-outlined text-xl md:text-2xl">mail</span>
+                                <span>ahmedabdelhamied905@gmail.com</span>
+                            </a>
+                            <div class="w-px h-6 bg-white/10 hidden md:block"></div>
+                            <a class="flex items-center gap-2 md:gap-3 text-secondary hover:text-white transition-colors" href="tel:+201093960630">
+                                <span class="material-symbols-outlined text-xl md:text-2xl">call</span>
+                                <span dir="ltr">+20 109 396 0630</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-6 md:py-12 px-4 sm:px-6 border-t border-[#cf96ff]/10 bg-[#131313]">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 max-w-7xl mx-auto">
+            <div class="font-headline text-[9px] md:text-xs uppercase tracking-widest text-[#adaaaa] text-center md:text-start">
+                <span lang="en">© 2024 Ahmed Abdelhameed. Crafted with Odoo precision.</span>
+                <span lang="ar">© 2024 أحمد عبدالحميد. صُنع بدقة واحترافية.</span>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                <a class="text-[#adaaaa] hover:text-[#d873ff] transition-colors duration-300 font-headline text-[10px] md:text-xs tracking-widest" dir="ltr" href="tel:+201093960630">+20 109 396 0630</a>
+                <a class="text-[#adaaaa] hover:text-[#d873ff] transition-colors duration-300 font-headline text-[10px] md:text-xs uppercase tracking-widest" href="https://github.com/ahmedabdelhamied1" target="_blank">GitHub</a>
+                <a class="text-[#adaaaa] hover:text-[#d873ff] transition-colors duration-300 font-headline text-[10px] md:text-xs uppercase tracking-widest" href="https://www.linkedin.com/in/ahmed-abdelhameed-0557282a4/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            const html = document.documentElement;
+            const body = document.body;
+            const btnEn = document.getElementById('btn-en');
+            const btnAr = document.getElementById('btn-ar');
+
+            if (lang === 'ar') {
+                html.dir = 'rtl';
+                html.lang = 'ar';
+                body.classList.remove('lang-en', 'font-body');
+                body.classList.add('lang-ar', 'font-arabic');
+                btnAr.classList.add('bg-primary-dim', 'text-white');
+                btnAr.classList.remove('text-[#adaaaa]');
+                btnEn.classList.remove('bg-primary-dim', 'text-white');
+                btnEn.classList.add('text-[#adaaaa]');
+            } else {
+                html.dir = 'ltr';
+                html.lang = 'en';
+                body.classList.remove('lang-ar', 'font-arabic');
+                body.classList.add('lang-en', 'font-body');
+                btnEn.classList.add('bg-primary-dim', 'text-white');
+                btnEn.classList.remove('text-[#adaaaa]');
+                btnAr.classList.remove('bg-primary-dim', 'text-white');
+                btnAr.classList.add('text-[#adaaaa]');
+            }
+        }
+    </script>
+</body>
+</html>
